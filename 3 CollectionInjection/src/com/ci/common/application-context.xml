@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean id="storeAddress" class="com.ci.beans.StoreAddress">
+	   <property name="storeAddress">
+		   	<map key-type="java.lang.String" value-type="com.ci.beans.StoreAddress">
+		   		<entry key="Ameerpet">
+		   			<ref bean="store1"/>
+		   		</entry>
+		   		<entry key="Hitech City">
+		   			<ref bean="store2"/>
+		   		</entry>
+		   	</map>
+		</property>
+   </bean>
+    <bean id="storeManager" class="com.ci.beans.StoreManager">
+    	<property name="salesManager">
+    		<map key-type="java.lang.String" value-type="com.ci.beans.StoreManager">
+    			<entry key="John">
+    				<ref bean="store1"/>
+    			</entry>
+    			<entry key="Rakesh">
+    				<ref bean="store2"/>
+    			</entry>
+    		</map>
+    	</property>
+    </bean>
+	
+	<bean id="store1" class="com.ci.beans.Store">
+		<property name="storeName" value="RelianceDigital"/>
+		<property name="products">
+			<list >
+				 <ref bean="product1"/>
+      	    	 <ref bean="product2"/>
+			</list>
+		</property>
+		<property name="floorManager">
+			<props>
+				<prop key="Seniour Manager">Smith</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="store2" class="com.ci.beans.Store">
+		<property name="storeName" value="RelianceDigital"/>
+		<property name="products">
+			<list >
+				 <ref bean="product1"/>
+      	    	 <ref bean="product2"/>
+			</list>
+		</property>
+		<property name="floorManager">
+			<props>
+				<prop key="Seniour Manager">Scott</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="product2" class="com.ci.beans.Product">
+		<property name="productName" value="Television"/>
+		<property name="manufacturer" value="Samsung"/>
+		<property name="features">
+			<list>
+				<value>40 inches Full HD</value>
+				<value>3D supports</value>
+				<value>Dolby Atmos Sound</value>
+			</list>
+		</property>
+		<!-- <property name="store" ref="store"/> -->
+		<property name="reviews" >
+			<set value-type="java.lang.String">
+				<value>Superb</value>
+				<value>clapped</value>
+			</set>			
+		</property>
+	</bean>
+	<bean id="product1" class="com.ci.beans.Product">
+		<property name="productName" value="Television"/>
+		<property name="manufacturer" value="Samsung"/>
+		<property name="features">
+			<list>
+				<value>40 inches Full HD</value>
+				<value>3D supports</value>
+				<value>Dolby Atmos Sound</value>
+			</list>
+		</property>
+		<!-- <property name="store" ref="store"/> -->
+		<property name="reviews" >
+			<set value-type="java.lang.String">
+				<value>Superb</value>
+				<value>clapped</value>
+			</set>			
+		</property>
+	</bean>
+</beans>
