@@ -63,9 +63,9 @@
 				</td>
 		</tr>
 		<tr>
-				<td>city:</td>
+				<td>state:</td>
 			<td>
-			<select name="city">
+			<select name="state">
 			<%
 				String getStateQuery="select * from state";
 			    String state=null;
@@ -85,9 +85,9 @@
 			</td>
 		</tr>
 		<tr>
-				<td>city:</td>
+				<td>Country:</td>
 			<td>
-			<select name="city">
+			<select name="country">
 			<%
 				String getCountyQuery="select * from country";
 			    String country=null;
