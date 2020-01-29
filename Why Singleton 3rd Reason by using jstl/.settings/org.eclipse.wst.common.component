@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Why Singleton 3rd Reason by calling request scope in jsp scriptlet tag">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="java-output-path" value="/Why Singleton 3rd Reason by calling request scope in jsp scriptlet tag/build/classes"/>
+        <property name="context-root" value="Why Singleton 3rd Reason by calling request scope in jsp scriptlet tag"/>
+    </wb-module>
+</project-modules>
