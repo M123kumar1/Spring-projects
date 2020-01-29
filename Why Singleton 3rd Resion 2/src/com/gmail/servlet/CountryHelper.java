@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CountryList{
+public class CountryHelper{
 	
 	public List countryList() {
 		String getCountryQuery="select * from country";

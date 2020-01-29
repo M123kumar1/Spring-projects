@@ -4,9 +4,9 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="com.gmail.servlet.CityList"%>
-<%@page import="com.gmail.servlet.StateList"%>
-<%@page import="com.gmail.servlet.CountryList"%>
+<%@page import="com.gmail.servlet.CityHelper"%>
+<%@page import="com.gmail.servlet.StateHelper"%>
+<%@page import="com.gmail.servlet.CountryHelper"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -49,12 +49,12 @@
 			<td>
 			<select name="city">
 				<%
-					CityList cList = new CityList();
-						  List cityList=cList.cityList();
-						  for(Object value:cityList){
-							  String city=(String)value;
-							  out.print("<option value="+"'"+city+"'"+">"+city+"</option>");
-						  }
+					CityHelper cList = new CityHelper();
+												  List cityList=cList.cityList();
+												  for(Object value:cityList){
+													  String city=(String)value;
+													  out.print("<option value="+"'"+city+"'"+">"+city+"</option>");
+												  }
 				%>
 		</select>
 				</td>
@@ -64,12 +64,12 @@
 			<td>
 			<select name="state">
 			<%
-			StateList sList = new StateList();
-			  List stateList=sList.stateList();
-			  for(Object value:stateList){
-				  String state=(String)value;
-				  out.print("<option value="+"'"+state+"'"+">"+state+"</option>");
-			  }
+				StateHelper sList = new StateHelper();
+					  List stateList=sList.stateList();
+					  for(Object value:stateList){
+						  String state=(String)value;
+						  out.print("<option value="+"'"+state+"'"+">"+state+"</option>");
+					  }
 			%>
 		</select>
 			</td>
@@ -79,12 +79,12 @@
 			<td>
 			<select name="country">
 			<%
-			 CountryList ctrList = new CountryList();
-			  List countryList=ctrList.countryList();
-			  for(Object value:countryList){
-				  String country=(String)value;
-				  out.print("<option value="+"'"+country+"'"+">"+country+"</option>");
-			  } 
+				CountryHelper ctrList = new CountryHelper();
+				  List countryList=ctrList.countryList();
+				  for(Object value:countryList){
+					  String country=(String)value;
+					  out.print("<option value="+"'"+country+"'"+">"+country+"</option>");
+				  }
 			%>
 		</select>
 			</td>

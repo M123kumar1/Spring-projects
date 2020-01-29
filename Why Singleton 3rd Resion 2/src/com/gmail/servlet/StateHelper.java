@@ -16,32 +16,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CityList{
+public class StateHelper{
 	
-	public List cityList() {
-		String getCityQuery="select * from city";
-	    String city=null;
+	public List stateList() {
+		String getStateQuery="select * from state";
+	    String state=null;
 		Connection con=null;
 		Statement stmt=null;
 		ResultSet rs=null;
-		List cityList=null;
+		List stateList=null;
 		RequestDispatcher rd=null;
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","manager");
 			stmt=con.createStatement();
-			rs=stmt.executeQuery(getCityQuery);
-			cityList=new ArrayList();
+			rs=stmt.executeQuery(getStateQuery);
+			stateList=new ArrayList();
 			while(rs.next()){
-				city=rs.getString("city_name");
-				cityList.add(city);
+				state=rs.getString("state_name");
+				stateList.add(state);
 			}
 			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return cityList;
+		return stateList;
 	}
 }
