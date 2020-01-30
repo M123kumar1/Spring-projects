@@ -56,7 +56,7 @@
 				rs=stmt.executeQuery(getCityQuery);
 				while(rs.next()){
 					city=rs.getString("city_name");
-					out.print("<option value="+"'"+city+"'"+">"+city+"</option>");
+					out.print("<option value='"+city+"'>"+city+"</option>");
 				}
 			%>
 		</select>
@@ -78,7 +78,7 @@
 				stateRs=stateStmt.executeQuery(getStateQuery);
 				while(stateRs.next()){
 					state=stateRs.getString("state_name");
-					out.print("<option value="+"'"+state+"'"+">"+state+"</option>");
+					out.print("<option value='"+state+"'>"+state+"</option>");
 				}
 			%>
 		</select>
@@ -100,7 +100,7 @@
 				countryRs=countryStmt.executeQuery(getCountyQuery);
 				while(countryRs.next()){
 					country=countryRs.getString("country_name");
-					out.print("<option value="+"'"+country+"'"+">"+country+"</option>");
+					out.print("<option value='"+country+"'>"+country+"</option>");
 				}
 			%>
 		</select>
