@@ -10,5 +10,10 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="D:/tomcat9/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="D:/tomcat9/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="F:/Hyderabad/Nataraz Sir/NATARAJ DVD 1 NEW/DataBase Softwares/MySQL/MySQL Software/jars/mysql-connector-java-5.1.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
